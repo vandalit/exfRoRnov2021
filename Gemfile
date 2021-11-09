@@ -42,6 +42,12 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  #las gemas insertadas por mi
+  gem 'hirb', '~>0.7.0'
+  #gem 'rails-footnotes', '>= 4.0.0', '<5'
+  #gem 'rails6-footnotes', '~> 5.0', '>= 5.0.2'
+  gem 'annotate', '~> 3.1', '>= 3.1.1'
+  
 end
 
 group :test do

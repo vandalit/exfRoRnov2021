@@ -1,5 +1,6 @@
 class ApartmentsController < ApplicationController
   def index
+    @departamentos = Apartment.all
   end
 
   def new

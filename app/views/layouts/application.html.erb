@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
     <title>ExfRoRnov2021</title>
@@ -7,10 +7,37 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  
   </head>
 
-  <body>
+  <body id="page-top">
+
+ <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 bg-secondary" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <i class="navbar-brand">Examen final :: Emprendimiento Digital |RoR| </i>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="https://github.com/vandalit/">Github(repo)</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://learn.codingdojo.com/">CodingDojo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://edutecno.cl/sede-virtual-e-camp/">Edutecno</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://talentodigitalparachile.cl/curso/emprendimientodigital/">TalentoDigital</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <br><br><br><br>
     <%= yield %>
+
+    <!-- Footer-->
+    <br><br><br><br><br>
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Van Dalit :: Iván Espinoza - Sala 45</div></div>
+        </footer>
+
   </body>
 </html>

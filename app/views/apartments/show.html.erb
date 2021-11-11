@@ -1,2 +1,37 @@
-<h1>Apartments#show</h1>
-<p>Find me in app/views/apartments/show.html.erb</p>
+<div class="form-row text-center">
+    <div class="col-12">
+        <div class="container col-6">
+        <table class="table table-dark table-hover ">
+            <thead>
+                <tr>
+                    <th>Departamento N°</th>
+                    <th>Edificio</th>
+                    <th>Habitaciones</th>
+                    <th>Dormitorios</th>
+                    <th>Orientación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><%= @departamento.numero %><br></td>
+                    <td><%= Building.find(@departamento.building_id).nombre %></td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>poniente</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    <!--imagen-->
+        <div>
+        <%= image_tag "floor-plan.jpg", {height: 350}  %>
+        </div>
+
+    <!--botones-->
+        <br>
+        <% name = Building.find(@departamento.building_id).nombre %>    
+        <%= link_to "Regresar a #{name}", building_path(@departamento.building_id), class: "btn btn-secondary btn-lg" %>
+        <%= link_to 'Regresar a edificios', edificios_path, class: "btn btn-dark btn-lg" %> 
+        <%= link_to 'Regresar a departamentos', departamentos_path, class: "btn btn-dark btn-lg" %> 
+    </div>
+</div>

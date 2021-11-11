@@ -1,2 +1,10 @@
-<h1>Apartments#new</h1>
-<p>Find me in app/views/apartments/new.html.erb</p>
+<div class="form-row text-center">
+    <div class="col-12">
+        <br>
+        <h1 class="text-center">Nuevo Departamento</h1>
+        <br><br>
+        <%= render 'form', apartment: @departamento %>
+        <br>
+        <%= link_to 'Regresar a Departamentos', departamentos_path, class: "btn btn-secondary btn-lg"  %>
+    </div>
+</div>

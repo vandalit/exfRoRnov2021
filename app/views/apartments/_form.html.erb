@@ -1,0 +1,14 @@
+<%= form_with(model: @apartment) do |form| %>
+    <div>
+        <%= form.label :numero %>
+        <%= form.text_field :numero, class: "text-dark" %>
+    </div>
+    <br>
+    <div>
+        <%= form.label :building_id, 'Seleccione Edificio' %>
+        <%= form.collection_select :building_id, Building.order(:nombre), :id, :nombre %>
+    </div>
+    <br><br>
+    <%= form.submit 'guardar', class: "btn btn-success btn-lg" %> <br>
+
+<% end %>

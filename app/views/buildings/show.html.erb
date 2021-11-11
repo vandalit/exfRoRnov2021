@@ -1,2 +1,35 @@
-<h1>Buildings#show</h1>
-<p>Find me in app/views/buildings/show.html.erb</p>
+<div class="form-row text-center">
+    <div class="col-12">
+    <h1><%= @edificio.nombre.titleize %></h1>
+    <p><%= @edificio.direccion.titleize %> :: <%= @edificio.ciudad.titleize %></p>
+    <br>
+
+        <% @departamentos = Apartment.where(building_id: @edificio.id) %>               
+        
+        <div class="container col-6">
+        <table class="table table-dark table-hover ">
+        <thead>
+            <tr>
+                <th>Número departamento: </th>
+                <th>Detalle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @departamentos.each do |departamento| %>
+            <tr>
+                <td><%= departamento.numero %></td>
+                <td><%= button_to 'Detalle', departamento, :method => 'get', class: "btn btn-warning text-dark" %></td>
+            </tr>
+            <% end %>
+        </tbody>     
+        </table>
+        </div>
+        <br>
+    <!--botones-->
+        <div class="btn">
+        <%= link_to 'Regresar', edificios_path, class: "btn btn-dark btn-lg" %> <br>
+        </div>
+        <br>
+    </div>
+</div>
+

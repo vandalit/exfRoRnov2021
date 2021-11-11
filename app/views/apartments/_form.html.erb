@@ -6,7 +6,7 @@
     <br>
     <div>
         <%= form.label :building_id, 'Seleccione Edificio' %>
-        <%= form.collection_select :building_id, Building.order(:nombre), :id, :nombre %>
+        <%= form.collection_select :building_id, Building.order(:nombre), :id, :nombre, include_blank: "Edificios" %>
     </div>
     <br><br>
     <%= form.submit 'guardar', class: "btn btn-success btn-lg" %> <br>

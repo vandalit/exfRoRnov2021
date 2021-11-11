@@ -1,3 +1,24 @@
-<h1>Apartments#create</h1>
-<p>Find me in app/views/apartments/create.html.erb</p>
-<h2>Hidden path</h2>
+<div class="form-row text-center">
+    <div class="col-12"><div>
+        <h1>Error de registro</h1>
+        <p>ID de Edificio no valido,<br> 
+        por favor ingrese primero un Edificio antes de ingresar Departamentos.<br>
+        o asegurece de haber escodigo un Edificio existente</p>
+        <br><br><br>
+<!-- Buttons -->
+        <div class="btn">
+        <%= link_to "Reintentar Nuevo Departamento", new_apartment_path, class: "btn btn-success btn-lg" %>
+        </div>
+        <br>
+        <div class="btn">
+        <%=link_to "nuevo edificio", new_building_path, class: "btn btn-success btn-lg" %>
+        </div>
+        <div class="btn">
+            <%= link_to 'Edificios', edificios_path, class: "btn btn-outline-danger btn-lg" %>
+        </div>
+        <div class="btn">
+        <%= link_to 'Departamentos', departamentos_path, class: "btn btn-light btn-lg" %> <br>
+        </div>
+        <br>
+    </div>
+</div>

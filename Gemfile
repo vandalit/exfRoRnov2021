@@ -6,8 +6,11 @@ ruby '2.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+#gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
+gem 'pg', '~> 1.1'
+
+
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
@@ -47,6 +50,8 @@ group :development do
   #gem 'rails-footnotes', '>= 4.0.0', '<5'
   #gem 'rails6-footnotes', '~> 5.0', '>= 5.0.2'
   gem 'annotate', '~> 3.1', '>= 3.1.1'
+
+  
   
 end
 

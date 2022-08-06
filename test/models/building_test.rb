@@ -2,7 +2,7 @@
 #
 # Table name: buildings
 #
-#  id         :integer          not null, primary key
+#  id         :bigint           not null, primary key
 #  ciudad     :string           not null
 #  direccion  :string           not null
 #  nombre     :string           not null
